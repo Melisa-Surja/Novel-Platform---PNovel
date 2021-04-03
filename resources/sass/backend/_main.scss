@@ -1,0 +1,27 @@
+.backend {
+    @import "quill";
+    
+    .datatable {
+        @import "datatables";
+    }
+
+    @import "my_datatables";
+    @import "vue_select";
+
+    main {
+        a:not(.button) {
+            @apply font-medium;
+            @apply text-primary;
+
+            &:hover {
+                @apply text-primary-light;
+            }
+            &:focus {
+                @apply outline-none;
+                @apply underline;
+            }
+        }
+        
+    }
+}
+

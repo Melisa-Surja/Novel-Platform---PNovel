@@ -1,0 +1,86 @@
+.login, .register, .reset-password {
+    @apply min-h-screen;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply bg-gray-50;
+    @apply py-12;
+    @apply px-4;
+
+    @screen sm {
+        @apply px-6;
+    } 
+    @screen lg {
+        @apply px-8;
+    }
+
+    h2 {
+        @apply text-center;
+        @apply text-3xl;
+        @apply leading-9;
+        @apply font-extrabold;
+        @apply text-gray-900;
+    }
+
+    input {
+        @apply border-gray-300;
+        &.error {
+            @apply border-red-500;
+        }
+    }
+}
+
+.login {
+    [type='email'], [type='password'] {
+        @apply appearance-none;
+        @apply rounded-none;
+        @apply relative;
+        @apply block;
+        @apply w-full;
+        @apply px-3;
+        @apply py-2;
+        @apply border;
+        @apply text-gray-900;
+
+        &:focus {
+            @apply outline-none;
+            @apply shadow-outline-blue;
+            @apply border-blue-300;
+            @apply z-10;
+        }
+        &::placeholder {
+            @apply text-gray-500;
+        }
+    }
+
+    [type='email'] {
+        @apply rounded-t-md;
+    }
+    [type='password'] {
+        @apply rounded-b-md;
+    }
+}
+
+.register, .reset-password {
+    [type='email'], [type='password'] {
+        @apply appearance-none;
+        @apply relative;
+        @apply block;
+        @apply w-full;
+        @apply px-3;
+        @apply py-2;
+        @apply border;
+        @apply text-gray-900;
+        @apply rounded-md;
+
+        &:focus {
+            @apply outline-none;
+            @apply shadow-outline-blue;
+            @apply border-blue-300;
+            @apply z-10;
+        }
+        &::placeholder {
+            @apply text-gray-500;
+        }
+    }
+}

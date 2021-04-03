@@ -1,0 +1,13 @@
+textarea, input {
+    @apply bg-transparent;
+}
+
+.textarea-parent, input {
+    @apply border-gray-400;
+}
+
+.comment-form {
+    input {
+        @apply py-1;
+    }
+}

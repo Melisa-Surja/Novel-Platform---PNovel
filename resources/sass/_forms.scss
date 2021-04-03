@@ -1,0 +1,92 @@
+[type='checkbox'] {
+    @apply h-4;
+    @apply w-4;
+    @apply text-primary #{!important};
+}
+
+
+a, button, input, .my-transition {
+    @apply transition;
+    @apply ease-in-out;
+    @apply duration-150;
+    @apply transform;
+}
+a.button, button {
+    @apply relative;
+    @apply flex;
+    @apply justify-center;
+    @apply py-2;
+    @apply px-4;
+    @apply border;
+    @apply border-transparent;
+    @apply text-sm;
+    @apply leading-5;
+    @apply font-medium;
+    @apply rounded-md;
+    @apply text-white;
+    @apply select-none;
+
+    @apply bg-primary;
+    
+    &:hover {
+        @apply bg-primary-light;
+    }
+    &:active {
+        @apply bg-primary-light;
+    }
+    &:focus {
+        @apply outline-none;
+        @apply shadow-outline-indigo;
+        @apply no-underline;
+
+        @apply border-primary-light;
+    }
+
+    &.button-secondary {
+        @apply bg-secondary;
+
+        &:hover {
+            @apply bg-secondary-light;
+        }
+    }
+
+    &.outline {
+        @apply bg-transparent;
+        @apply border-primary-light;
+        @apply text-primary-light;
+
+        &.button-secondary {
+            @apply border-secondary-light;
+            @apply text-secondary-light;
+        }
+    }
+
+    &.icon {
+        @apply pl-3;
+        @apply items-center;
+    }
+
+    &.delete {
+        @apply px-2;
+        @apply bg-red-500;
+
+        &:hover {
+            @apply bg-red-400;
+        }
+    }
+
+
+    &:disabled {
+        @apply bg-gray-600;
+        @apply text-gray-400;
+        @apply opacity-25;
+        @apply pointer-events-none;
+        
+        &:hover {
+            @apply bg-gray-600;
+            @apply text-gray-400;
+            @apply opacity-25;
+            @apply pointer-events-none;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+
+.theme-dark {
+    .bg-white {
+        @apply bg-cool-gray-800;
+    }
+
+    .border-gray-200 {
+        @apply border-gray-800;
+    }
+
+    .text-gray-900 {
+        @apply text-gray-100;
+    }
+    .text-gray-600 {
+        @apply text-gray-400;
+    }
+}

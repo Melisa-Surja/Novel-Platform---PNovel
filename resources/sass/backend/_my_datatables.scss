@@ -1,0 +1,11 @@
+table.dataTable {
+    tbody tr td {
+        @apply text-sm;
+    }
+}
+
+.datatable {
+    [type="submit"] {
+        @apply rounded-md;
+    }
+}

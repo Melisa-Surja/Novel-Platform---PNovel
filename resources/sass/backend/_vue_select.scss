@@ -1,0 +1,7 @@
+.v-select {
+    .vs__deselect {
+        @apply bg-transparent;
+        @apply p-0;
+        @apply inline-flex;
+    }
+}

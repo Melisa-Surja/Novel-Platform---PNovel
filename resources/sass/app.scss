@@ -1,0 +1,112 @@
+:root {
+    --color-header: #652CFF;
+    --color-footer: #4a337a;
+    --color-primary: #C90FFF;
+    --color-primary-light: #FF7979;
+    --color-secondary: #6439FF;
+    --color-secondary-light: #CE45FF;
+    --color-bg: #0c072c;
+    --color-bg-light: #1f1a43;
+    --color-bg-dark: #0c072c;
+}
+$header-color: #652CFF;
+$button-left: #C90FFF;
+$button-right: #FF7979;
+$primary-color: #C90FFF;
+// indigo-600
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import 'backend/main';
+@import 'theme';
+@import 'login';
+@import 'header';
+@import 'forms';
+
+.frontend {
+    @apply bg-bg;
+    // background-color: #17171A;
+
+    @import 'frontend/quill';
+    @import 'frontend/forms';
+
+    main {
+        .modal-bg {
+            @apply bg-bg-light;
+        }
+    }
+
+    nav {
+        background-image: linear-gradient(to bottom, #652CFF, #4B19FF);
+    }
+
+    footer {
+        @apply bg-footer;
+        // bg-gray-900;
+        a {
+            &:hover {
+                @apply text-gray-100;
+            }
+        }
+    }
+
+
+    nav.pagination {
+        a.button, button {
+            @apply bg-gray-700;
+            @apply rounded-none;
+
+            &.current-page {
+                @apply bg-gray-600;
+                @apply pointer-events-none;
+            }
+            &[rel='prev'] {
+                @apply rounded-l-md;
+            }
+            &[rel='next'] {
+                @apply rounded-r-md;
+            }
+
+            &:hover, &:focus {
+                @apply bg-gray-600;
+            }
+        }
+    }
+
+    .cover {
+        @extend .my-transition;
+
+        &:hover {
+            @apply scale-105;
+        }
+    }
+
+    .start-reading {
+        @apply border-0;
+
+        box-shadow:0 0 4px $primary-color; 
+        background-image: linear-gradient(to right, $button-left, $button-right);
+    
+        &:hover, &:focus {
+            box-shadow:0 0 10px $primary-color; 
+        }
+    }
+
+    .header-box {
+        @apply bg-header;
+    }
+
+    .latest-releases {
+        >div:nth-child(2n-1) {
+            @apply bg-bg-light;
+        }
+    }
+    .archive {
+        >div:nth-child(2n-1) {
+            @apply bg-bg-light;
+        }
+    }
+}
+
