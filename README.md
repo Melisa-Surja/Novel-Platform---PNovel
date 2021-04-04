@@ -17,6 +17,8 @@ Remove the `-seed` code if you're in production mode as it fills your database w
 php artisan migrate:fresh --seed --force
 php artisan passport:install --force
 php artisan passport:keys --force
+npm install
+npm run prod
 ```
 
 # Update script
